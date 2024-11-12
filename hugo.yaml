@@ -2,3 +2,36 @@ baseURL: https://michaels-blog.org/
 languageCode: en-us
 title: michaels-blog
 theme: ["PaperMod"]
+
+params:
+  homeInfoParams:
+    Title: hi there,
+    Content: welcome on my tech blog, mb
+
+  socialIcons: # optional
+    - name: "github"
+      url: "https://github.com/michalshy"
+    - name: "linkedin"
+      url: "https://www.linkedin.com/in/micha%C5%82-brodziak-014499246/"
+
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON # necessary for search
+
+menu:
+  main:
+    - identifier: archive
+      name: archive
+      url: /archive/
+      weight: 10
+    - identifier: tags
+      name: tags
+      url: /tags/
+      weight: 20
+    - identifier: search
+      name: 🔍
+      url: /search/
+      weight: 30
